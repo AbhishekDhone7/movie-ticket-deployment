@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios  from "axios";
 import "./mix.css";
-const url = process.env.REACT_APP_API_URL;
+
 
 const Login = () => {
 
@@ -60,7 +60,7 @@ const Login = () => {
     // console.log(formData);
     // alert("Login Succesfull")
     try {
-      const res = await axios.post("http://localhost:8009/users/login", formData);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/users/login`, formData);
       if (res.data.status === 201) {
         localStorage.setItem("userDataToken", res.data.result.token);
         nav("/dash");

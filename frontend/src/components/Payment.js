@@ -37,13 +37,13 @@ const Payment = () => {
     } else {
       try {
         const response = await axios.post(
-          `http://localhost:8009/theator/updateSeats`,
+          `${process.env.REACT_APP_API_URL}/theator/updateSeats`,
           state
         );
         try {
           // console.log(response.status);
           const Booking = await axios.post(
-            "http://localhost:8009/booking",
+            `${process.env.REACT_APP_API_URL}/booking`,
             Ticket
           );
           if (Booking.status === 201) {

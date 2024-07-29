@@ -26,7 +26,7 @@ const Container = ({ slides }) => {
             {row.map((item, index) => (
               <div key={index} className="item">
                 <img
-                  src={`http://localhost:8009/${item.image}`}
+                  src={`${process.env.REACT_APP_API_URL}/${item.image}`}
                   alt={item.name}
                 />
                 <h3>{item.name}</h3>

@@ -27,7 +27,7 @@ const App = () => {
       nav("/admin_dash");
       try {
         const res = await axios.get(
-          `http://localhost:8009/admin/valid_admin/${token}`
+          `${process.env.REACT_APP_API_URL}/admin/valid_admin/${token}`
         );
         let data = await res.data;
         // console.log(data);
@@ -45,7 +45,7 @@ const App = () => {
 
       try {
         const res = await axios.get(
-          `http://localhost:8009/users/valid_user/${token}`
+          `${process.env.REACT_APP_API_URL}/users/valid_user/${token}`
         );
         let data = await res.data;
         console.log(data);

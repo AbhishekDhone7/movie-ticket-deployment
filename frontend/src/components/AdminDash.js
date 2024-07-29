@@ -15,7 +15,7 @@ const AdminDashBoard = () => {
     console.log(token);
 
     try {
-      const res = await axios.get(`http://localhost:8009/admin/valid_admin/${token}`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/admin/valid_admin/${token}`);
       let data = await res.data
       console.log(data);
       console.log("User Varified");

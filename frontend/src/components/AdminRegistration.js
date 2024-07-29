@@ -78,7 +78,7 @@ const AdminRegistration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8009/admin/admin_register", formData);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/admin/admin_register`, formData);
       // console.log(res);
       if (res.data.status === 201) {
         alert("user Registration Done");

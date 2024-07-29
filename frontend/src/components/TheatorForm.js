@@ -47,7 +47,7 @@ const TheatorForm = () => {
     console.log(formData);
     try {
       const response = await axios.post(
-        "http://localhost:8009/theator",
+        `${process.env.REACT_APP_API_URL}/theator`,
         formData
       );
       console.log("Response from server:", response.data);

@@ -45,7 +45,7 @@ const Header = () => {
     if (admintoken) {
       try {
         const res = await axios.get(
-          `http://localhost:8009/admin/logout/${admintoken}`
+          `${process.env.REACT_APP_API_URL}/admin/logout/${admintoken}`
         );
         let data = await res.data;
         console.log(data);
@@ -65,7 +65,7 @@ const Header = () => {
     } else {
       try {
         const res = await axios.get(
-          `http://localhost:8009/users/logout/${token}`
+          `${process.env.REACT_APP_API_URL}/users/logout/${token}`
         );
         let data = await res.data;
         console.log(data);

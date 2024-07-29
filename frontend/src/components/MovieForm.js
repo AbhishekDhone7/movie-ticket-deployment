@@ -25,7 +25,7 @@ const MovieForm = () => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:8009/movies', formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/movies`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

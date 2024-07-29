@@ -56,7 +56,7 @@ const AdminLogin = () => {
       e.preventDefault()
       // console.log(formData);
       try {
-        const res = await axios.post("http://localhost:8009/admin/admin_login", formData);
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/admin/admin_login`, formData);
         console.log(res);
         if (res.data.status === 422){
           alert("Plese Check Log in id and Passward")

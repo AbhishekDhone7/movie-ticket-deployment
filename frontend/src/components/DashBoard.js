@@ -13,7 +13,7 @@ const DashBoard = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get("http://localhost:8009/movies");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/movies`);
       setSlide(response.data);
       // console.log(response.data)
     } catch (error) {
@@ -32,7 +32,7 @@ const DashBoard = () => {
 
     try {
       const res = await axios.get(
-        `http://localhost:8009/users/valid_user/${token}`
+        `${process.env.REACT_APP_API_URL}/users/valid_user/${token}`
       );
       let data = await res.data;
       // console.log(data);

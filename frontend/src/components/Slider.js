@@ -93,7 +93,7 @@ const Slider = ({ slides }) => {
           {slides.concat(slides.slice(0, 5)).map((slide, index) => (
             <div key={index} className="slide">
               <img
-                src={`http://localhost:8009/${slide.image}`}
+                src={`${process.env.REACT_APP_API_URL}/${slide.image}`}
                 alt={slide.name}
               />
               <h3>{slide.name}</h3>

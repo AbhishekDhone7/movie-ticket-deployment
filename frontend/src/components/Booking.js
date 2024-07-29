@@ -24,7 +24,7 @@ const Booking = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get("http://localhost:8009/theator");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/theator`);
       setList(response.data);
       // console.log(response.data);
     } catch (error) {
@@ -69,7 +69,7 @@ const Booking = () => {
     // console.log(obj);
     try {
       const response = await axios.post(
-        `http://localhost:8009/theator/city`,
+        `${process.env.REACT_APP_API_URL}/theator/city`,
         obj
       );
       // console.log(response.data);
@@ -106,7 +106,7 @@ const Booking = () => {
     // console.log(obj);
     try {
       const response = await axios.post(
-        `http://localhost:8009/theator/theatorName`,
+        `${process.env.REACT_APP_API_URL}/theator/theatorName`,
         obj
       );
       // console.log(response.data);
@@ -144,7 +144,7 @@ const Booking = () => {
     // console.log(obj);
     try {
       const response = await axios.post(
-        `http://localhost:8009/theator/theatorTimeslot`,
+        `${process.env.REACT_APP_API_URL}/theator/theatorTimeslot`,
         obj
       );
       // console.log(response.data);
@@ -170,7 +170,7 @@ const Booking = () => {
     // console.log(obj);
     try {
       const response = await axios.post(
-        `http://localhost:8009/theator/theatorSeats`,
+        `${process.env.REACT_APP_API_URL}/theator/theatorSeats`,
         obj
       );
       // console.log(response.data[0].SeatArray);
@@ -220,7 +220,7 @@ const Booking = () => {
         >
           <div className="item">
             <img
-              src={`http://localhost:8009/${movidata.image}`}
+              src={`${process.env.REACT_APP_API_URL}/${movidata.image}`}
               alt={movidata.name}
             />
             <h3>{movidata.name}</h3>
