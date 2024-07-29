@@ -1,0 +1,26 @@
+.seat-selection {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr); /* 15 seats per row */
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+.seat.booked {
+  background-color: red;
+}
+
+.seat:hover {
+  background-color: #ccc;
+}

@@ -1,0 +1,110 @@
+/* Base styles */
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.item {
+  flex: 1 1 20%; /* Ensures each item takes up 20% of the row width */
+  max-width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.item img:hover {
+  transform: scale(1.1); /* Adds scale transform */
+  border-radius: 10px;
+}
+
+.item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.item p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.item button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  margin: 10px;
+}
+
+button {
+  background-color: rgb(22, 85, 220);
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  color: wheat;
+  margin: 25px;
+}
+
+/* Media Queries */
+
+/* Large screens */
+@media (max-width: 1200px) {
+  .item {
+    flex: 1 1 25%;
+    max-width: 25%;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .item {
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%; /* Makes the button take full width on small screens */
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,127 @@
+/* Base styles */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 20%; /* Each slide takes up 20% of the container width to show 5 slides at once */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slide h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.slide p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.slide button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide button:hover {
+  background-color: #0056b3;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+/* Media Queries */
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .slide {
+    min-width: 25%; /* Show 4 slides at once */
+  }
+
+  .slide h3 {
+    font-size: 1.1em; /* Adjusts font size */
+  }
+
+  .slide p {
+    font-size: 0.9em; /* Adjusts font size */
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 33.33%; /* Show 3 slides at once */
+  }
+
+  .slide h3 {
+    font-size: 1em; /* Adjusts font size */
+  }
+
+  .slide p {
+    font-size: 0.85em; /* Adjusts font size */
+  }
+
+  .slide button {
+    font-size: 0.9em; /* Adjusts button font size */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .slide {
+    min-width: 50%; /* Show 2 slides at once */
+  }
+
+  .slide h3 {
+    font-size: 0.9em; /* Adjusts font size */
+  }
+
+  .slide p {
+    font-size: 0.75em; /* Adjusts font size */
+  }
+
+  .slide button {
+    font-size: 0.8em; /* Adjusts button font size */
+  }
+}
