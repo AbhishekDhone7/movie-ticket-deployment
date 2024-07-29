@@ -33,7 +33,9 @@ app.use('/booking', bookingRoutes);
 // const seatRoutes = require('./routes/seat');
 // app.use('/api', seatRoutes);
 
-
+app.get("/", (req, res)=>{
+  res.send("Movie ticket express app")
+})
 
 const PORT = process.env.PORT || 8009;
 app.listen(PORT, () => {
